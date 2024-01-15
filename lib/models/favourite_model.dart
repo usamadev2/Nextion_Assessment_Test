@@ -1,3 +1,5 @@
+/* ------------------- Favourite Model Class ------------------------------- */
+
 class FavouritModel {
   String title;
   String releaseData;
