@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -7,7 +9,9 @@ import 'package:nextion_assessmenttest/core/constants/api_constant/api_contant.d
 import 'package:nextion_assessmenttest/core/constants/app_colors.dart';
 import 'package:nextion_assessmenttest/core/constants/strings/app_strings.dart';
 import 'package:nextion_assessmenttest/core/extensions/space_xy.dart';
+import 'package:nextion_assessmenttest/core/services/db_service.dart';
 import 'package:nextion_assessmenttest/core/widget/custom_text.dart';
+import 'package:nextion_assessmenttest/models/favourite_model.dart';
 import 'package:nextion_assessmenttest/models/movie_model.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
@@ -15,7 +19,7 @@ class MovieDetailsScreen extends StatelessWidget {
 
   /* ------------------- MovieDetail Screen ------------------------------- */
 
-  final MovieDetailController controller = Get.put(MovieDetailController());
+  final MovieDetailController favoriteController = Get.put(MovieDetailController());
 
   static const String routeName = '/movie-detail-screen';
   final Movie screenData = Get.arguments;
@@ -45,26 +49,30 @@ class MovieDetailsScreen extends StatelessWidget {
                 ),
                 Align(
                   alignment: Alignment.topRight,
-                  child: IconButton(
-                    onPressed: () {
-                      controller.toggleStatus();
-                      // if (controller.status.value == 'favourite') {
-                      //   controller.status.value = '';
-                      // } else {
-                      //   // Add to favorites and store in SharedPreferences
-                      //   SharedPreferencesServices.addToFavorites(jsonEncode(FavouritModel(
-                      //     title: screenData.title.toString(),
-                      //     releaseData: screenData.releaseData.toString(),
-                      //     overview: screenData.overview.toString(),
-                      //     imagePath: screenData.posterPath.toString(),
-                      //   )));
-
-                      //   controller.status.value = 'favourite';
-                      // }
-                    },
-                    icon: Icon(
-                      Icons.favorite,
-                      color: controller.iconColor,
+                  child: Obx(
+                    () => IconButton(
+                      onPressed: () {
+                        // Toggle favorite string on button click
+                        if (favoriteController.favoriteString.value == 'favourite') {
+                          favoriteController.setFavoriteString('');
+                        } else {
+                          favoriteController.setFavoriteString('favourite');
+                          // Add to favorites and store in SharedPreferences
+                          SharedPreferencesServices.addToFavorites(jsonEncode(FavouritModel(
+                            title: screenData.title.toString(),
+                            releaseData: screenData.releaseData.toString(),
+                            overview: screenData.overview.toString(),
+                            imagePath: screenData.posterPath.toString(),
+                          )));
+                        }
+                      },
+                      icon: Icon(
+                        Icons.favorite,
+                        weight: 116.0.w,
+                        color: favoriteController.favoriteString.value == 'favourite'
+                            ? AppColors.cPurple2
+                            : AppColors.white,
+                      ),
                     ),
                   ),
                 ),
