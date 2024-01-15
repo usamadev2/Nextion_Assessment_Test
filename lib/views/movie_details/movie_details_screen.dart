@@ -13,6 +13,8 @@ import 'package:nextion_assessmenttest/models/movie_model.dart';
 class MovieDetailsScreen extends StatelessWidget {
   MovieDetailsScreen({super.key});
 
+  /* ------------------- MovieDetail Screen ------------------------------- */
+
   final MovieDetailController controller = Get.put(MovieDetailController());
 
   static const String routeName = '/movie-detail-screen';
