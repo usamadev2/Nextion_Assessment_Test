@@ -4,7 +4,7 @@ import 'package:nextion_assessmenttest/app.dart';
 import 'package:nextion_assessmenttest/core/global/controller_injector.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/* ------------------- main Class ------------------------------- */
+/* ------------------- main ------------------------- */
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
