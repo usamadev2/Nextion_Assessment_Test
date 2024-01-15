@@ -20,8 +20,8 @@ class CustomText extends StatelessWidget {
   final TextAlign? textAlign;
   final double? fontSize;
   final FontWeight? fontWeight;
-  final Color? color;
   final VoidCallback? onTap;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
