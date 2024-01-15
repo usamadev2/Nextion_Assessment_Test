@@ -30,12 +30,13 @@ class MovieApi extends GetxController {
         },
       );
 
-      /// checking the response
+      /// checking the response api
       if (response.statusCode == 200) {
         var responseData = response.data;
         upcomingMovies = (responseData['results'] as List).map((movieMap) => Movie.fromMap(movieMap)).toList();
       }
     } catch (e) {
+      /// catch error
       throw Exception(e.toString());
     }
 
