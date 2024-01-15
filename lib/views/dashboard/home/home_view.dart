@@ -54,11 +54,11 @@ class HomeView extends GetView<MovieApi> {
                         return InkWell(
                           onTap: () => Get.toNamed(
                             MovieDetailsScreen.routeName,
-                            arguments: ScreenData(
+                            arguments: Movie(
                               title: snapshot.data![index].title.toString(),
                               releaseData: snapshot.data![index].releaseData.toString(),
                               overview: snapshot.data![index].overview.toString(),
-                              imagePath: snapshot.data![index].posterPath.toString(),
+                              posterPath: snapshot.data![index].posterPath.toString(),
                             ),
                           ),
                           child: Container(
@@ -129,18 +129,4 @@ class HomeView extends GetView<MovieApi> {
       ),
     );
   }
-}
-
-class ScreenData {
-  final String title;
-  final String releaseData;
-  final String overview;
-  final String imagePath;
-
-  ScreenData({
-    required this.title,
-    required this.releaseData,
-    required this.overview,
-    required this.imagePath,
-  });
 }

@@ -9,13 +9,13 @@ import 'package:nextion_assessmenttest/core/constants/app_colors.dart';
 import 'package:nextion_assessmenttest/core/constants/strings/app_strings.dart';
 import 'package:nextion_assessmenttest/core/extensions/space_xy.dart';
 import 'package:nextion_assessmenttest/core/widget/custom_text.dart';
-import 'package:nextion_assessmenttest/views/dashboard/home/home_view.dart';
+import 'package:nextion_assessmenttest/models/movie_model.dart';
 
 class MovieDetailsScreen extends GetView<MovieDetailController> {
   MovieDetailsScreen({super.key});
 
   static const String routeName = '/movie-detail-screen';
-  final ScreenData screenData = Get.arguments;
+  final Movie screenData = Get.arguments;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class MovieDetailsScreen extends GetView<MovieDetailController> {
                 bottomRight: Radius.circular(16.0.r),
               ),
               child: Image.network(
-                '${ApiConstants.imageBaseUrl}${screenData.imagePath}',
+                '${ApiConstants.imageBaseUrl}${screenData.posterPath.toString()}',
                 width: double.infinity,
                 height: double.infinity,
                 fit: BoxFit.cover,
@@ -43,7 +43,7 @@ class MovieDetailsScreen extends GetView<MovieDetailController> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0.w),
             child: CustomText(
-              text: screenData.title,
+              text: screenData.title.toString(),
               fontSize: 26.0.sp,
               maxLine: 1,
             ),
@@ -60,7 +60,7 @@ class MovieDetailsScreen extends GetView<MovieDetailController> {
                   maxLine: 1,
                 ),
                 CustomText(
-                  text: screenData.releaseData,
+                  text: screenData.releaseData.toString(),
                   fontSize: 18.0.sp,
                   maxLine: 1,
                 ),
@@ -80,7 +80,7 @@ class MovieDetailsScreen extends GetView<MovieDetailController> {
             padding: EdgeInsets.symmetric(horizontal: 16.0.h),
             child: SizedBox(
               child: CustomText(
-                text: screenData.overview,
+                text: screenData.overview.toString(),
                 fontSize: 16.0.sp,
                 fontWeight: FontWeight.w300,
                 maxLine: 5,
