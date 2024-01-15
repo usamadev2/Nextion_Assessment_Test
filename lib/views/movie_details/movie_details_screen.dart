@@ -68,7 +68,6 @@ class MovieDetailsScreen extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.favorite,
-                        weight: 116.0.w,
                         color: favoriteController.favoriteString.value == 'favourite'
                             ? AppColors.cPurple2
                             : AppColors.white,
