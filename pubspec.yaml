@@ -42,7 +42,7 @@ dependencies:
   # screen utilities
   flutter_screenutil: ^5.9.0
 
-  # http request
+  # dio request
   dio: ^5.4.0
 
   # internet checking
@@ -50,7 +50,6 @@ dependencies:
 
   # localy data store
   shared_preferences: ^2.2.2
-  get_storage: ^2.1.1
   
   # check debugging
   logger: ^2.0.2+1
