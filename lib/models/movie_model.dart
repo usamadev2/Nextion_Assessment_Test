@@ -1,3 +1,5 @@
+/* ------------------- Movie Model Class ------------------------------- */
+
 import 'dart:convert';
 
 class Movie {
