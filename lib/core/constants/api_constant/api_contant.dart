@@ -6,6 +6,6 @@ class ApiConstants {
 
   static const String imageBaseUrl = 'https://image.tmdb.org/t/p/w500';
 
-  /* ------------------- End Point ------------------ */
+  /* ------------------- End Point  ------------------- */
   static const String upcomingMovies = '/movie/popular';
 }
