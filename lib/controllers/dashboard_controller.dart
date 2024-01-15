@@ -4,6 +4,8 @@ import 'package:nextion_assessmenttest/views/dashboard/favourite/favourite_view.
 import 'package:nextion_assessmenttest/views/dashboard/home/home_view.dart';
 
 class DashBoardController extends GetxController {
+  /* ------------------- DashboardScreen Controller ------------------------------- */
+
   static DashBoardController instance = Get.find<DashBoardController>();
 
   List<Widget> dashboardPages = [
