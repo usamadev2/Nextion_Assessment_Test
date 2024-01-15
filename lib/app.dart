@@ -8,7 +8,7 @@ import 'core/constants/strings/app_strings.dart';
 
 class NextionAssessmentTestApp extends StatelessWidget {
   const NextionAssessmentTestApp({super.key});
-
+/* ------------------- Material App ------------------------------- */
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
