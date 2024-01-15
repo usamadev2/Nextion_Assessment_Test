@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-///
 abstract class AppColors {
   ///------------------------ Predefined colors--------------------
   static const Color black = Colors.black;
