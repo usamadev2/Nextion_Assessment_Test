@@ -1,6 +1,6 @@
 /// Utility class holding all the strings of app
 abstract class AppStrings {
-  /* ------------------- App String Names ------------------ */
+  /* ------------------- App String Names ---------------------------- */
   static const String appName = "Nextion Assessment Test";
   static const String homeAppBarName = "MovieList Screen";
   static const String home = "Home";
