@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:nextion_assessmenttest/views/dashboard/favourite/favourite_view.dart';
-import 'package:nextion_assessmenttest/views/dashboard/home/home_view.dart';
+import 'package:nextion_assessmenttest/views/dashboard/home/movie_list_view.dart';
 
 class DashBoardController extends GetxController {
   /* ------------------- DashboardScreen Controller ------------------------------- */
