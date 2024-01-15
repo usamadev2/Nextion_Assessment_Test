@@ -5,12 +5,12 @@ import 'package:nextion_assessmenttest/views/movie_details/movie_details_screen.
 /// Router of the app for navigation
 abstract class AppRouter {
   static final List<GetPage<dynamic>> routes = [
-    /* ------------------- DashboardScreen ------------------ */
+    /* ------------------- DashboardScreen ------------------------------- */
     GetPage(
       name: DashboardScreen.routeName,
       page: () => const DashboardScreen(),
     ),
-    /* -------------------MovieDetail Screen ------------------ */
+    /* -------------------MovieDetail Screen ------------------------------- */
     GetPage(
       name: MovieDetailsScreen.routeName,
       page: () => MovieDetailsScreen(),
