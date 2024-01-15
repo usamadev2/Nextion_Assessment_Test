@@ -80,7 +80,7 @@ class FavouriteView extends GetView<DashBoardController> {
                                   },
                                   icon: Icon(
                                     Icons.favorite,
-                                    color: AppColors.white,
+                                    color: AppColors.cPurple2,
                                   ),
                                 ),
                               ),
