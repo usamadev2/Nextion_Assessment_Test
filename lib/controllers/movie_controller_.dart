@@ -6,6 +6,9 @@ import 'package:nextion_assessmenttest/core/constants/api_constant/app_key.dart'
 import 'package:nextion_assessmenttest/models/movie_model.dart';
 
 class MovieApi extends GetxController {
+  /* ------------------- DashboardScreen Controller ------------------------------- */
+
+  /// using Dio package for api Calling
   final dio.Dio _dioClient = dio.Dio(
     dio.BaseOptions(
       baseUrl: ApiConstants.baseUrl,
@@ -14,10 +17,12 @@ class MovieApi extends GetxController {
     ),
   );
 
+  /// Get Movie api Method
   Future<List<Movie>> getMovies() async {
     List<Movie> upcomingMovies = [];
 
     try {
+      /// calling get api
       dio.Response response = await _dioClient.get(
         ApiConstants.upcomingMovies,
         queryParameters: {
@@ -25,6 +30,7 @@ class MovieApi extends GetxController {
         },
       );
 
+      /// checking the response
       if (response.statusCode == 200) {
         var responseData = response.data;
         upcomingMovies = (responseData['results'] as List).map((movieMap) => Movie.fromMap(movieMap)).toList();
