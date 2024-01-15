@@ -7,7 +7,7 @@ class DashboardScreen extends GetView<DashBoardController> {
   const DashboardScreen({super.key});
 
   static const String routeName = "/dashboard";
-
+/* ------------------- Dashboard Screen ------------------------------- */
   @override
   Widget build(BuildContext context) {
     Get.put(
