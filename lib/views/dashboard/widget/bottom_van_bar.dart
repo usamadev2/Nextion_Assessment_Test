@@ -17,6 +17,7 @@ class BottomNavbar extends StatefulWidget {
 class _BottomNavbarState extends State<BottomNavbar> {
   int navBarIndex = 0;
 
+  /* ------------------- BottomNavigationBar ------------------------------- */
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
