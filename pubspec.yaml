@@ -45,6 +45,21 @@ dependencies:
   # http request
   dio: ^5.4.0
 
+  # internet checking
+  connectivity_plus: ^5.0.2
+
+  # localy data store
+  shared_preferences: ^2.2.2
+  get_storage: ^2.1.1
+  
+  # check debugging
+  logger: ^2.0.2+1
+
+  
+  # TEXT
+  # For different google fonts
+  google_fonts: ^6.1.0
+
 
 dev_dependencies:
   flutter_test:
