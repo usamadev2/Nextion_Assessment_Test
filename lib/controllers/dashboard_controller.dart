@@ -7,7 +7,7 @@ class DashBoardController extends GetxController {
   static DashBoardController instance = Get.find<DashBoardController>();
 
   List<Widget> dashboardPages = [
-    const HomeView(),
+    const MovieListScreen(),
     const FavouriteView(),
   ];
 

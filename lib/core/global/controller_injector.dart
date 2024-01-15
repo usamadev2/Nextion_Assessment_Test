@@ -5,7 +5,7 @@ import 'package:nextion_assessmenttest/controllers/movie_detail_controller.dart'
 
 /// invoke to initialize the controllers (inject controllers)
 void initControllers() {
-  Get.put(DashBoardController());
-  Get.put(MovieApi());
-  Get.put(MovieDetailController());
+  Get.put<DashBoardController>(DashBoardController(), permanent: true);
+  Get.put<MovieApi>(MovieApi(), permanent: true);
+  Get.put<MovieDetailController>(MovieDetailController(), permanent: true);
 }

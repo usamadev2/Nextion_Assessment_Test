@@ -8,4 +8,5 @@ abstract class AppStrings {
   static const String overView = "Over View:";
   static const String releaseDate = "Release Date:";
   static const String title = "Title:";
+  static const String noInternet = "check Internet Connection";
 }
