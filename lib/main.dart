@@ -19,5 +19,5 @@ void main() async {
 
   runApp(
     const NextionAssessmentTestApp(),
-  );
+  ); 
 }
