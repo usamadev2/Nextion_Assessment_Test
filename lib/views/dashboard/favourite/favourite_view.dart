@@ -15,6 +15,7 @@ import 'package:nextion_assessmenttest/models/favourite_model.dart';
 // Not a screen don't use Scaffold
 class FavouriteView extends GetView<DashBoardController> {
   const FavouriteView({super.key});
+/* ------------------- Favourite View ------------------------------- */
 
   @override
   Widget build(BuildContext context) {
