@@ -1,6 +1,6 @@
 /// Utility class contain all app errors strings
 abstract class AppErrorsStrings {
-  /* ------------------- Error String Name ------------------ */
+  /* ------------------- Error String Name --------------------- */
   static const String textOrRichTextAtATime = "Either text or richText will be used at time.";
   static const String userNotFoundMessage =
       "There is no user record corresponding to this identifier. It is possible that the user has been deleted.";
